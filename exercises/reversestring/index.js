@@ -6,6 +6,33 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-function reverse(str) {}
+
+//my solution
+// const reverse = (str) => {
+//     str = [...str]
+//     let reverse = []
+//     while (str.length !== 0) {
+//         reverse.push(str.pop())
+//     }
+//     return reverse.join('')
+// }
+
+// //alternate 
+// const reverse = (str) => {
+//     let reversed = ''
+//     for (let char of str) {
+//         reversed = char + reversed
+//     }
+//     return reversed
+// }
+
+//alternate using reduce
+
+const reverse = (str) => {
+    return [...str].reduce((rev, char) => char + rev, '')
+}
+
+reverse('altaf')
+
 
 module.exports = reverse;
