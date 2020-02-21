@@ -20,6 +20,8 @@ fizzBuzz = n => {
                 (i % 3 === 0) ? console.log('fizz') : console.log(i)
     }
     //testing to see if my commit is in branch
+
+    // from laptop
 }
 
 module.exports = fizzBuzz;
