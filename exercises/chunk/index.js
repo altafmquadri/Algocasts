@@ -8,33 +8,30 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-const chunk = (arr, size) => {
-    let newArr = []
-    for (let el of arr) {
-        let last = newArr[newArr.length -1]
-        console.log(last, 'i am last')
-        if(!last || last.length === size) {
-            console.log('last in if b4 push', last)
-            newArr.push([el])
-            console.log('last in if after push', last)
-        } else {
-            last.push(el)
-        }
-    } 
-    return newArr
-}
-
 // const chunk = (arr, size) => {
 //     let newArr = []
-//     let index = 0
+//     let last 
 
-//     while (index < arr.length) {
-//         newArr.push(arr.slice(index, index + size))
-//         index += size
-//     }
+//     for(let el of arr) {
+//         last = newArr[newArr.length - 1]
+//         if (!last || last.length === size) {
+//             newArr.push([el])
+//         } else {
+//             last.push(el)
+//         }
+//     } 
 //     return newArr
 // }
 
-chunk([1, 2, 3, 4, 5], 2)
+const chunk = (arr, size) => {
+    let newArr = []
+    let index = 0
+
+    while (index < arr.length) {
+        newArr.push(arr.slice(index, index + size))
+        index += size
+    }
+    return newArr
+}
 
 module.exports = chunk;
