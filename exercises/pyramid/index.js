@@ -30,13 +30,13 @@
 // }
 
 
-pyramid = (n, r=0, level='')  => {
+pyramid = (n, r = 0, level = '') => {
     if (r === n) return
-    if (level.length === 2 * n -1) {
+    if (level.length === 2 * n - 1) {
         console.log(level)
-        return pyramid(n, r+1)
+        return pyramid(n, r + 1)
     }
-    let midpoint= Math.floor((2 *n -1)/2)
+    let midpoint = Math.floor((2 * n - 1) / 2)
     if (midpoint - r <= level.length && midpoint + r >= level.length) {
         level += '#'
     } else {
@@ -44,4 +44,5 @@ pyramid = (n, r=0, level='')  => {
     }
     pyramid(n, r, level)
 }
+pyramid(30)
 module.exports = pyramid;
